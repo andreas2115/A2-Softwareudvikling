@@ -1,0 +1,42 @@
+name: Autograding Tests
+'on':
+- push
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Build and run
+      id: build-and-run
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Build and run
+        setup-command: curl -sSL https://dot.net/v1/dotnet-install.sh | sudo bash
+          -s -- --install-dir /usr/share/dotnet --channel 7.0
+        command: dotnet run --project DIKUArena
+        timeout: 10
+        max-score: 1
+    - name: TA tests
+      id: ta-tests
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: TA tests
+        setup-command: curl -sSL https://dot.net/v1/dotnet-install.sh | sudo bash
+          -s -- --install-dir /usr/share/dotnet --channel 7.0
+        command: dotnet test DIKUArenaTests
+        timeout: 10
+        max-score: 1
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        BUILD-AND-RUN_RESULTS: "${{steps.build-and-run.outputs.result}}"
+        TA-TESTS_RESULTS: "${{steps.ta-tests.outputs.result}}"
+      with:
+        runners: build-and-run,ta-tests
