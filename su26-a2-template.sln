@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIKUArena", "DIKUArena\DIKUArena.csproj", "{AA8AEF3C-87F1-BC60-9156-1E9B01F43C01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIKUArenaTests", "DIKUArenaTests\DIKUArenaTests.csproj", "{78CFACD7-2598-1CD0-D592-8EF19E0FA568}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA8AEF3C-87F1-BC60-9156-1E9B01F43C01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA8AEF3C-87F1-BC60-9156-1E9B01F43C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA8AEF3C-87F1-BC60-9156-1E9B01F43C01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA8AEF3C-87F1-BC60-9156-1E9B01F43C01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78CFACD7-2598-1CD0-D592-8EF19E0FA568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78CFACD7-2598-1CD0-D592-8EF19E0FA568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78CFACD7-2598-1CD0-D592-8EF19E0FA568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78CFACD7-2598-1CD0-D592-8EF19E0FA568}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84C91391-95B8-4258-88F1-E1001FC96192}
+	EndGlobalSection
+EndGlobal
