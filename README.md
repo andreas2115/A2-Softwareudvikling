@@ -1,6 +1,7 @@
 # A2 – Softwareudvikling (DIKUArena)
 Andreas Toft Neldeberg
 wxj782
+https://github.com/andreas2115/A2-Softwareudvikling.git
 
 from the root folder:
 
